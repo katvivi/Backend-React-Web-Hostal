@@ -1,6 +1,17 @@
+import express from "express"
+import cors from "cors"
+import db from "./database/db"
+import blogRoutess from "./routes/routes"
+
 const express = require('express');
 const cors = require('cors');
+const { default: db } = require('./database/db');
+
 const app = express();
+
+// app.get("/", req, res) => {
+//     res.send('Hola Mundo')
+// }
 
 // settings 
 app.set('port',process.env.PORT || 4000);
